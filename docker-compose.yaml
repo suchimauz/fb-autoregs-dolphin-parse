@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  app:
+    image: fb-autoregs-dolphin-parse-app
+    container_name: fb-autoregs-dolphin-parse-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/root/
