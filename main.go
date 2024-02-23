@@ -111,7 +111,7 @@ func generateDolphinMassImportFile(content string, parserConfig *ini.Section, te
 	descriptionColumn := "F"
 
 	for _, autoreg := range autoregs {
-		if autoreg == "" {
+		if len(strings.TrimSpace(autoreg)) == 0 {
 			continue
 		}
 
@@ -131,7 +131,7 @@ func generateDolphinMassImportFile(content string, parserConfig *ini.Section, te
 				userAgent = l
 				descriptionArr = append(descriptionArr, l)
 			} else {
-				if l != "" {
+				if len(strings.TrimSpace(l)) > 0 {
 					descriptionArr = append(descriptionArr, l)
 				}
 			}
