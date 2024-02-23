@@ -131,7 +131,9 @@ func generateDolphinMassImportFile(content string, parserConfig *ini.Section, te
 				userAgent = l
 				descriptionArr = append(descriptionArr, l)
 			} else {
-				descriptionArr = append(descriptionArr, l)
+				if l != "" {
+					descriptionArr = append(descriptionArr, l)
+				}
 			}
 		}
 		description := strings.Join(descriptionArr, "\n")
