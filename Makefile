@@ -1,4 +1,4 @@
-GOOS ?= windows
+GOOS ?= linux
 
 .PHONY:
 .SILENT:
