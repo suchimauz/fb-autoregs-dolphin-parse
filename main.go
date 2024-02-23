@@ -111,6 +111,10 @@ func generateDolphinMassImportFile(content string, parserConfig *ini.Section, te
 	descriptionColumn := "F"
 
 	for _, autoreg := range autoregs {
+		if autoreg == "" {
+			continue
+		}
+
 		var descriptionArr []string
 		var profileName string
 		var cookie string
